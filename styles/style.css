@@ -243,3 +243,38 @@ ol {
   object-fit: cover;
   object-position: center;
 }
+
+
+.search-form__pseudo-checkbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__label:active .search-form__pseudo-checkbox {
+  background-color: #fff;
+}
+
+.search-form__label:active {
+  text-decoration: none;
+}
